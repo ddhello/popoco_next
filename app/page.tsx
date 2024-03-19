@@ -16,7 +16,7 @@ const Threads: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("https://mipa.moe:9999/api/threads/get")
+    fetch("https://popoco.mipa.moe:9999/api/threads/get")
       .then(response => response.json())
       .then(data => {
         // 排序帖子数组，按照 ID 倒序排列

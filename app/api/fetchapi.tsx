@@ -4,7 +4,7 @@ export async function loggin(values: any) {
     formData.append('username', values.username)
     formData.append('password', values.password)
     try {
-        const api = await fetch('https://mipa.moe:9999/api/auth/login', {
+        const api = await fetch('https://popoco.mipa.moe:9999/api/auth/login', {
             method: 'POST',
             headers: {
             },
@@ -45,7 +45,7 @@ export async function regging(values: any) {
     formData.append('password', values.password)
     formData.append('email', values.email)
     try {
-        const api = await fetch('https://mipa.moe:9999/api/auth/register', {
+        const api = await fetch('https://popoco.mipa.moe:9999/api/auth/register', {
             method: 'POST',
             headers: {
             },
@@ -83,7 +83,7 @@ export async function regging(values: any) {
 export async function resendm(values: any) {
     const formData = new FormData()
     formData.append('username', values.username)
-    const api = await fetch('https://mipa.moe:9999/api/auth/resend', {
+    const api = await fetch('https://popoco.mipa.moe:9999/api/auth/resend', {
         method: 'POST',
         headers: {
         },
@@ -94,7 +94,7 @@ export async function resendm(values: any) {
 export async function get_user_info() {
     const token = localStorage.getItem('token')
     if (token) {
-        const api = await fetch('https://mipa.moe:9999/api/auth/info', {
+        const api = await fetch('https://popoco.mipa.moe:9999/api/auth/info', {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + token
@@ -125,7 +125,7 @@ export async function email_verify(values: any) {
     const formData = new FormData()
     formData.append('username', localStorage.getItem('username') as string)
     formData.append('Ecode', values.email)
-    const api = await fetch('https://mipa.moe:9999/api/auth/email', {
+    const api = await fetch('https://popoco.mipa.moe:9999/api/auth/email', {
         method: 'POST',
         headers: {
         },
@@ -146,7 +146,7 @@ export async function email_verify(values: any) {
 export async function search(values: any) {
     const formData = new FormData()
     formData.append('username', values.username)
-    const api = await fetch('https://mipa.moe:9999/api/admin/search', {
+    const api = await fetch('https://popoco.mipa.moe:9999/api/admin/search', {
         method: 'POST',
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token') as string
@@ -162,7 +162,7 @@ export async function search(values: any) {
 export async function admin(values: any) {
     const formData = new FormData()
     formData.append('username', values.username) 
-    const api = await fetch('https://mipa.moe:9999/api/admin', {
+    const api = await fetch('https://popoco.mipa.moe:9999/api/admin', {
         method: 'POST',
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token') as string,
@@ -178,7 +178,7 @@ export async function reset(values: any) {
     const formData = new FormData()
     formData.append('email', values.email)
     formData.append('password', values.password)
-    const api = await fetch('https://mipa.moe:9999/api/auth/reset', {
+    const api = await fetch('https://popoco.mipa.moe:9999/api/auth/reset', {
         method: 'POST',
         headers: {
         },

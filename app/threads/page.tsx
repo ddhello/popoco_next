@@ -16,7 +16,7 @@ const PostDetail = () => {
   const params = useSearchParams()
   const postId = params.get('id')
   useEffect(() => {
-    fetch("https://mipa.moe:9999/api/threads/detail",{
+    fetch("https://popoco.mipa.moe:9999/api/threads/detail",{
         method: 'GET',
         headers: {
             'id': postId?.toString() as string,
